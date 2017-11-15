@@ -3,7 +3,9 @@
 import os
 
 #basepath='/media/facundoq/Seagate Expansion Drive/ffff/rwth-tracking'
-basepath='/data/datasets/test_rwth'
+#basepath='/data/datasets/test_rwth'
+basepath='/data/datasets/rwth-tracking'
+
 files=os.listdir(basepath)
 files.sort()
 current_folderpath=''
@@ -19,10 +21,10 @@ for (i,f) in enumerate(files):
 
     print(folder)
     print(frame)
+    current_folderpath=folderpath
     folderpath=os.path.join(basepath,folder)
     if not (folderpath==current_folderpath):
-      current_folderpath=folderpath
-      os.mkdir(current_folderpath)
+      if not os.path.exists(current_folderpath):
+        os.mkdir(current_folderpath)
     destination_fullpath=os.path.join(current_folderpath,frame)
     os.rename(fullpath,destination_fullpath)
-  
