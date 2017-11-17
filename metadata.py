@@ -1,11 +1,11 @@
 import collections
 import os
 
-VideoFrame= collections.namedtuple('VideoFrame', ['video','frame','positions'])
+VideoFrame= collections.namedtuple('VideoFrame', ['video','frame','positions','path'])
 VideoPositions = collections.namedtuple('VideoPositions', ['id', 'positions'])
 Point = collections.namedtuple('Point', ['x', 'y'])
 
-def parse_videos_to_images(video_positions_filepath):
+def parse_videos_to_images(video_positions_filepath,images_path):
     from xml.dom import minidom
     xmldoc = minidom.parse(video_positions_filepath)
     video_elements = xmldoc.getElementsByTagName('video')
@@ -27,7 +27,9 @@ def parse_videos_to_images(video_positions_filepath):
                 y=int(point.attributes['y'].value)
                 positions[k].append(Point(x,y))
                 frame_positions[k]=Point(x,y)
-            video_frame_positions.append(VideoFrame(video_id,frame_id,frame_positions))
+                filename="frame%s_cam0.png" % str(frame_id).zfill(6)
+                path=os.path.join(images_path,str(video_id).zfill(3),filename)
+            video_frame_positions.append(VideoFrame(video_id,frame_id,frame_positions,path))
 
     return video_frame_positions
 
