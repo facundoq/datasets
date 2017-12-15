@@ -28,6 +28,5 @@ def draw_square(image,position,radius,color,fill=False,thickness=1):
 def draw_positions(image,positions):
     color=255
     radiuses={'head':35,'left_hand':30,'right_hand':30}
-    for k,v in positions.items():
-        position=np.array([v.y,v.x])
+    for k,position in positions.items():
         draw_square(image,position,radiuses[k],color,thickness=3)
