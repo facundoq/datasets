@@ -34,7 +34,7 @@ class LocalizationTarget(ABC):
 class LocalizationTargetRegression(LocalizationTarget):
     
     
-    def __init__(self,max_distance,body_parts=['head']):
+    def __init__(self,max_distance,body_parts):
         self.max_distance=max_distance
         super().__init__(body_parts)
         self.y_dim_per_body_part=2
@@ -73,7 +73,7 @@ class LocalizationTargetRegression(LocalizationTarget):
 class LocalizationTargetGrid(LocalizationTarget):
     
     
-    def __init__(self,localization_grid_shape,body_parts=['head']):
+    def __init__(self,localization_grid_shape,body_parts):
         self.localization_grid_shape=localization_grid_shape
         super().__init__(body_parts)
         
