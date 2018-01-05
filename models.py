@@ -171,6 +171,6 @@ def simple_conv(input_shape,classes):
     model.add(Conv2D(4, (3, 3), input_shape=input_shape, padding='same', activation='relu', kernel_constraint=maxnorm(3)))
     model.add(Flatten())
     model.add(Dense(150, kernel_initializer='normal', activation='relu'))
-    model.add(Dense(classes, kernel_initializer='normal',activation='sigmoid'))
+    model.add(Dense(classes, kernel_initializer='normal', activation='sigmoid'))
     #model.add(layers.GlobalAveragePooling2D())
     return model
