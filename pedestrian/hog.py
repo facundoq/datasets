@@ -13,15 +13,15 @@ def calculate_gradient_and_mag(image):
     mag = np.sqrt(gx**2+gy**2)
     return angle,mag
 
-def calculate_cells(angle,mag,cell_size,histogram_bins):
+def calculate_cells(angle,mag,histogram_bins,cell_size):
     
     eps=1e-10
     bins=np.linspace(0,np.pi+eps,histogram_bins)
     
     cs=cell_size
     rows,cols=angle.shape
-    cells_r,cells_c= ( rows//cs,cols//cs)
     
+    cells_r,cells_c= ( rows//cs,cols//cs)
     block_angle=view_as_blocks(angle, block_shape=(cs,cs))
     new_shape=(block_angle.shape[0],block_angle.shape[1],cs*cs)
     block_mag=view_as_blocks(mag, block_shape=(cs,cs))
@@ -46,7 +46,7 @@ def calculate_blocks(cells,stride,block_size):
     c=block_size #shorter name
     for i in range(block_histograms.shape[0]):
         ai=i*stride
-        for j in range(block_histograms.shape[0]):
+        for j in range(block_histograms.shape[1]):
             aj=j*stride
             block_histogram=cells[ai:ai+c[0],aj:aj+c[1],:].flatten()
             constant=np.sqrt(np.sum(block_histogram**2))
