@@ -115,8 +115,12 @@ class ASLIDIterator(tf.keras.preprocessing.image.Iterator):
         # The transformation of images is not under thread lock
         # so it can be done in parallel
         return self._get_batches_of_transformed_samples(index_array)
-    
-    
+    def get_batches(self):
+        batches,remaining_samples=divmod(self.n,self.batch_size)
+        if remaining_samples>0:
+            batches+=1
+        return batches
+            
 
     
 

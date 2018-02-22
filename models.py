@@ -174,3 +174,5 @@ def simple_conv(input_shape,classes):
     model.add(Dense(classes, kernel_initializer='normal', activation='sigmoid'))
     #model.add(layers.GlobalAveragePooling2D())
     return model
+
+
