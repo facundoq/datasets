@@ -1,7 +1,7 @@
 from skimage.util import view_as_blocks,view_as_windows
 import numpy as np
-import collections
-BoundingBox = collections.namedtuple("BoundingBox",["r","c","h","w"])
+
+
 
 
 def calculate_gradient_and_mag(image):
@@ -68,21 +68,3 @@ def calculate_hog(image,cell_size=6,histogram_bins=9,block_strides=1,block_size=
     blocks=calculate_blocks(cells,block_strides,block_size)
     descriptor=blocks.flatten()
     return descriptor
-
-def calculate_descriptor_windows(image,descriptor_function,window_scales=[(90,90)],window_strides=(40,40)):
-    rows=image.shape[0]//window_strides[0]
-    cols=image.shape[1]//window_strides[1]
-    descriptors=[]
-    for i in range(rows):
-        ai=i*window_strides[0]
-        for j in range(cols):
-            aj=j*window_strides[1]
-            for scale in window_scales:
-                to=(ai+scale[0],aj+scale[1])
-                if (to[0]<=image.shape[0] and to[1]<=image.shape[1]):
-                    window=image[ai:to[0],aj:to[1],:]
-                    descriptor=descriptor_function(window)
-                    bb=BoundingBox(ai,aj,scale[0],scale[1])
-                    descriptors.append((bb,descriptor))
-    
-    return descriptors
