@@ -1,0 +1,40 @@
+2018-03-02 20:27:28.629533
+Results on dataset fashion_mnist with model stn and rotated model stn
+rotated_model_test_dataset score: loss=0.563074, accuracy=0.798100
+model_test_dataset score: loss=0.453424, accuracy=0.830500
+rotated_model_rotated_test_dataset score: loss=0.569095, accuracy=0.796400
+model_rotated_test_dataset score: loss=5.340729, accuracy=0.195400
+
+
+2018-03-02 21:04:41.170485
+Results on dataset cluttered_mnist with model stn and rotated model stn
+rotated_model_test_dataset score: loss=2.301236, accuracy=0.111900
+model_test_dataset score: loss=2.301065, accuracy=0.111900
+rotated_model_rotated_test_dataset score: loss=2.301236, accuracy=0.111900
+model_rotated_test_dataset score: loss=2.301065, accuracy=0.111900
+
+
+2018-03-03 01:30:30.343356
+Results on dataset cifar10 with model stn and rotated model stn
+rotated_model_test_dataset score: loss=2.307170, accuracy=0.100000
+model_test_dataset score: loss=1.334457, accuracy=0.533000
+rotated_model_rotated_test_dataset score: loss=2.307170, accuracy=0.100000
+model_rotated_test_dataset score: loss=2.330873, accuracy=0.303200
+
+
+2018-03-03 07:00:29.857583
+Results on dataset cifar10 with model stn and rotated model stn
+rotated_model_test_dataset score: loss=1.737037, accuracy=0.376700
+model_test_dataset score: loss=2.303351, accuracy=0.100000
+rotated_model_rotated_test_dataset score: loss=1.762379, accuracy=0.370300
+model_rotated_test_dataset score: loss=2.303334, accuracy=0.100100
+
+
+2018-03-03 07:19:34.031507
+Results on dataset cifar10 with model stn and rotated model stn
+rotated_model_test_dataset score: loss=1.737037, accuracy=0.376700
+model_test_dataset score: loss=2.303351, accuracy=0.100000
+rotated_model_rotated_test_dataset score: loss=1.762379, accuracy=0.370300
+model_rotated_test_dataset score: loss=2.303334, accuracy=0.100100
+
+

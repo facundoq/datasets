@@ -1,0 +1,26 @@
+2018-02-22 18:44:24.822001
+Results on dataset cifar10 with model residual_network and rotated model residual_network
+rotated_model_test_dataset score: loss=0.971081, accuracy=0.663200
+model_test_dataset score: loss=0.714381, accuracy=0.762000
+rotated_model_rotated_test_dataset score: loss=1.042522, accuracy=0.635300
+model_rotated_test_dataset score: loss=2.899681, accuracy=0.314400
+
+
+2018-02-22 21:25:11.922965
+Results on dataset fashion_mnist with model residual_network and rotated model residual_network
+2018-02-23 12:15:34.999662
+Results on dataset fashion_mnist with model residual_network and rotated model residual_network
+rotated_model_test_dataset score: loss=0.417921, accuracy=0.857600
+model_test_dataset score: loss=0.286983, accuracy=0.903600
+rotated_model_rotated_test_dataset score: loss=0.416718, accuracy=0.856700
+model_rotated_test_dataset score: loss=6.289649, accuracy=0.185400
+
+
+2018-02-23 23:28:24.119405
+Results on dataset mnist with model residual_network and rotated model residual_network
+rotated_model_test_dataset score: loss=0.122893, accuracy=0.962000
+model_test_dataset score: loss=0.036735, accuracy=0.988100
+rotated_model_rotated_test_dataset score: loss=0.142141, accuracy=0.956700
+model_rotated_test_dataset score: loss=4.350059, accuracy=0.406900
+
+

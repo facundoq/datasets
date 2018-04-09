@@ -1,0 +1,8 @@
+2018-02-28 16:44:19.520189
+Results on dataset cifar10 with model sequential_3 and rotated model sequential_5
+rotated_model_test_dataset score: loss=1.107046, accuracy=0.636300
+model_test_dataset score: loss=1.871549, accuracy=0.698300
+rotated_model_rotated_test_dataset score: loss=1.148956, accuracy=0.617200
+model_rotated_test_dataset score: loss=5.062308, accuracy=0.328300
+
+
