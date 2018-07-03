@@ -1,3 +1,6 @@
 encode body parts positions as vectors instead of dictionaries, and provide a function to access each body part position
 
 (boston104 and ASLID)
+
+
+add http://sun.aei.polsl.pl/~mkawulok/gestures/
